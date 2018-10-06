@@ -1275,11 +1275,11 @@ rankIsEmpty(char *line) {
 	\*/
 	while (i++ >= -1) {
 		if (line[i] == 0x0A) {
-			if (! rk_opts & RK_NEW_LINES) {
+			if (! (rk_opts & RK_NEW_LINES) ) {
 				error = 1;
 			}
 		} else if (line[i] == 0x0D) {
-			if (! rk_opts & RK_CAR_RET) {
+			if (! (rk_opts & RK_CAR_RET) ) {
 				error = 1;
 			}
 		} else if (line[i] == 0x20 || line[i] == 0x09) {
